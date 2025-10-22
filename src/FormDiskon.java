@@ -136,11 +136,6 @@ public class FormDiskon extends javax.swing.JFrame {
         lblHarga.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblHarga.setText("HARGA ASLI");
 
-        txtHarga.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtHargaActionPerformed(evt);
-            }
-        });
         txtHarga.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtHargaKeyTyped(evt);
@@ -160,11 +155,6 @@ public class FormDiskon extends javax.swing.JFrame {
         lblVoucher.setText("KODE VOUCHER");
 
         txtVoucher.setEditable(false);
-        txtVoucher.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtVoucherActionPerformed(evt);
-            }
-        });
 
         btnHitung.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnHitung.setText("HITUNG");
@@ -310,10 +300,6 @@ public class FormDiskon extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtHargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHargaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtHargaActionPerformed
-
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         // TODO add your handling code here:
         hitungDiskon();
@@ -346,10 +332,6 @@ public class FormDiskon extends javax.swing.JFrame {
     cmbDiskon.setSelectedItem(sldDiskon.getValue() + "%");
     }//GEN-LAST:event_sldDiskonStateChanged
 
-    private void txtVoucherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVoucherActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtVoucherActionPerformed
-
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
         // TODO add your handling code here:
         System.exit(0);
@@ -359,7 +341,6 @@ public class FormDiskon extends javax.swing.JFrame {
         // TODO add your handling code here:                                
     char c = evt.getKeyChar();
     
-    // Jika bukan angka atau tombol backspace/delete, batalkan input
     if (!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE && c != java.awt.event.KeyEvent.VK_DELETE) {
         evt.consume(); // menolak karakter yang diketik
         java.awt.Toolkit.getDefaultToolkit().beep(); // bunyi peringatan
