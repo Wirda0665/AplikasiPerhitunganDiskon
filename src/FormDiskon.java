@@ -7,8 +7,8 @@ public class FormDiskon extends javax.swing.JFrame {
      */
     public FormDiskon() {
         initComponents();
-            setLocationRelativeTo(null); // agar form muncul di tengah
-    setResizable(false); // agar tidak bisa diubah ukurannya
+        setLocationRelativeTo(null); // agar form muncul di tengah
+        setResizable(false); // agar tidak bisa diubah ukurannya
 
     // Isi combo box diskon
     cmbDiskon.addItem("5%");
@@ -141,6 +141,11 @@ public class FormDiskon extends javax.swing.JFrame {
                 txtHargaActionPerformed(evt);
             }
         });
+        txtHarga.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtHargaKeyTyped(evt);
+            }
+        });
 
         lblDiskon.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblDiskon.setText("PILIH DISKON");
@@ -154,6 +159,7 @@ public class FormDiskon extends javax.swing.JFrame {
         lblVoucher.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblVoucher.setText("KODE VOUCHER");
 
+        txtVoucher.setEditable(false);
         txtVoucher.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtVoucherActionPerformed(evt);
@@ -179,6 +185,8 @@ public class FormDiskon extends javax.swing.JFrame {
         lblHasil.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblHasil.setText("HARGA AKHIR");
 
+        txtHasil.setEditable(false);
+
         txtRiwayat.setColumns(20);
         txtRiwayat.setRows(5);
         ScrollRiwayat.setViewportView(txtRiwayat);
@@ -193,6 +201,8 @@ public class FormDiskon extends javax.swing.JFrame {
 
         lblHemat.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblHemat.setText("PENGHEMATAN");
+
+        txtHemat.setEditable(false);
 
         btnKeluar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnKeluar.setText("KELUAR");
@@ -344,6 +354,18 @@ public class FormDiskon extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_btnKeluarActionPerformed
+
+    private void txtHargaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtHargaKeyTyped
+        // TODO add your handling code here:                                
+    char c = evt.getKeyChar();
+    
+    // Jika bukan angka atau tombol backspace/delete, batalkan input
+    if (!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE && c != java.awt.event.KeyEvent.VK_DELETE) {
+        evt.consume(); // menolak karakter yang diketik
+        java.awt.Toolkit.getDefaultToolkit().beep(); // bunyi peringatan
+    }
+    
+    }//GEN-LAST:event_txtHargaKeyTyped
 
     /**
      * @param args the command line arguments

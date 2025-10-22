@@ -198,6 +198,7 @@
         <Component class="javax.swing.JTextField" name="txtHarga">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHargaActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtHargaKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblDiskon">
@@ -230,6 +231,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtVoucher">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtVoucherActionPerformed"/>
           </Events>
@@ -265,6 +269,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtHasil">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
 
@@ -301,6 +308,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtHemat">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnKeluar">
           <Properties>
