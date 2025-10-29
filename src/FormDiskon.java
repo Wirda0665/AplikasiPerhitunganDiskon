@@ -154,8 +154,6 @@ public class FormDiskon extends javax.swing.JFrame {
         lblVoucher.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblVoucher.setText("KODE VOUCHER");
 
-        txtVoucher.setEditable(false);
-
         btnHitung.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnHitung.setText("HITUNG");
         btnHitung.addActionListener(new java.awt.event.ActionListener() {
@@ -273,7 +271,7 @@ public class FormDiskon extends javax.swing.JFrame {
                     .addComponent(btnClear)
                     .addComponent(btnKeluar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
